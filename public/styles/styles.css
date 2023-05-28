@@ -1,0 +1,94 @@
+@font-face {
+    font-family: basicFont;
+    src: url(/public/fonts/TitilliumWeb-SemiBold.ttf);
+}
+
+.gear{
+    animation-name: ckw;
+    animation-duration: 5s;
+    /* Things added */
+    animation-iteration-count: infinite;
+    transform-origin: 50% 50%;
+    display: inline-block;
+    /* <--- */
+}
+@keyframes ckw {
+    0% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.button{
+    justify-self: flex-end;
+    align-self: flex-start;
+    margin-bottom: auto;
+}
+.button:hover{
+    color: #0000001b;
+}
+body{
+    background: #9df6cfbe;
+    display: flex; align-items: center; justify-content: center; min-height: 90vh;
+    flex-direction: column;
+}
+.main{
+    background: #37ec707a;
+    width: 450px;
+    border-radius: 16px;
+    box-shadow: 0 0 128px 0 rgba(0, 0, 0, 0.1),0 32px 64px -48px rgba(0, 0, 0, 0.5);
+    align-self: center;
+    align-self: center;
+    margin-bottom: auto;
+}
+.wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.wrapper p{
+    font-weight: 800;
+    margin-right: auto;
+    font-family: basicFont;
+    color: black;
+}
+.wrapper svg{
+    margin-left: 8%; 
+    margin-right: 15px
+}
+
+
+/* The popup form - hidden by default */
+.form-popup {
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    background-color: #37ec707a;
+    height: 10vh;
+    bottom: 89vh;
+    left: 15vh;
+    width: 300px;
+    box-shadow: 0 0 128px 0 rgba(0, 0, 0, 0.529),0 32px 64px -48px rgba(0, 0, 0, 0.512);
+    z-index: 9;
+    border-radius: 10%;
+  }
+
+.form-popup label b{
+    font-weight: 200;
+    margin-right: 10px;
+    font-family: basicFont;
+    color: black;
+    margin-left: 3px;
+}
+/* Full-width input fields */
+.form-popup textarea{
+    width: 200px;
+    height: 6vh;
+    border: 0px;
+    margin-right: auto;
+}
